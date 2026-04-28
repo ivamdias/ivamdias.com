@@ -1,0 +1,7 @@
+- AI Engineering by Chip Huyen
+- The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win
+- Atomic Habits by James Clear
+- Getting things done by David Allen
+- Life 3.0 by Max Tegmark
+- Zero to one by Peter Thiel
+- The Lean Startup by Eric Ries
