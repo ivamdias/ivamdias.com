@@ -114,14 +114,17 @@ function BookCover({ book }) {
   const [state, setState] = useState2({ status: 'loading', url: null });
   useEffect2(() => {
     let cancelled = false;
+    if (book.isbn) {
+      if (!cancelled) setState({ status: 'ok', url: `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg` });
+      return;
+    }
     (async () => {
       try {
         const res = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(book.query)}&limit=1`);
         const json = await res.json();
         const doc = json?.docs?.[0];
         if (doc?.cover_i) {
-          const url = `https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg`;
-          if (!cancelled) setState({ status: 'ok', url });
+          if (!cancelled) setState({ status: 'ok', url: `https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg` });
         } else {
           if (!cancelled) setState({ status: 'fallback', url: null });
         }
@@ -130,10 +133,12 @@ function BookCover({ book }) {
       }
     })();
     return () => { cancelled = true; };
-  }, [book.query]);
+  }, [book.isbn, book.query]);
+
+  const handleError = () => setState({ status: 'fallback', url: null });
 
   if (state.status === 'loading') return <div className="cover"><div className="skel"></div></div>;
-  if (state.status === 'ok') return <div className="cover"><img src={state.url} alt={book.title} loading="lazy" /></div>;
+  if (state.status === 'ok') return <div className="cover"><img src={state.url} alt={book.title} loading="lazy" onError={handleError} /></div>;
   return (
     <div className="cover">
       <div className="placeholder">

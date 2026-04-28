@@ -141,12 +141,12 @@ window.__PORTFOLIO_DATA__ = {
     }
   ],
   books: [
-    { title: "AI Engineering",                 author: "Chip Huyen",     query: "AI Engineering Chip Huyen" },
-    { title: "The Phoenix Project",            author: "Gene Kim",       query: "The Phoenix Project Gene Kim" },
-    { title: "Atomic Habits",                  author: "James Clear",    query: "Atomic Habits James Clear" },
-    { title: "Getting Things Done",            author: "David Allen",    query: "Getting Things Done David Allen" },
-    { title: "Life 3.0",                       author: "Max Tegmark",    query: "Life 3.0 Max Tegmark" },
-    { title: "Zero to One",                    author: "Peter Thiel",    query: "Zero to One Peter Thiel" },
-    { title: "The Lean Startup",               author: "Eric Ries",      query: "The Lean Startup Eric Ries" }
+    { title: "AI Engineering",                 author: "Chip Huyen",     query: "AI Engineering Chip Huyen",         isbn: "9781098166298" },
+    { title: "The Phoenix Project",            author: "Gene Kim",       query: "The Phoenix Project Gene Kim",      isbn: "9780988262508" },
+    { title: "Atomic Habits",                  author: "James Clear",    query: "Atomic Habits James Clear",         isbn: "9780735211292" },
+    { title: "Getting Things Done",            author: "David Allen",    query: "Getting Things Done David Allen",   isbn: "9780143126560" },
+    { title: "Life 3.0",                       author: "Max Tegmark",    query: "Life 3.0 Max Tegmark",              isbn: "9781101946596" },
+    { title: "Zero to One",                    author: "Peter Thiel",    query: "Zero to One Peter Thiel",           isbn: "9780804139021" },
+    { title: "The Lean Startup",               author: "Eric Ries",      query: "The Lean Startup Eric Ries",        isbn: "9780307887894" }
   ]
 };
