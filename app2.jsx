@@ -316,7 +316,7 @@ function Contact() {
           <h3>Let's <em>talk</em> about your next project.</h3>
           <p>Open to technical advisory, private wireless engagements, and conversations about anything that mixes telecom, cloud, and AI. Best to reach me by email.</p>
           <div className="contact-list">
-            <a className="contact-row" href={`mailto:${D2.identity.email}`} style={{ width: "589.599px", height: "376.891px" }}>
+            <a className="contact-row" href={`mailto:${D2.identity.email}`}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                 <span className="label">Email</span>
                 <span className="value">{D2.identity.email}</span>
